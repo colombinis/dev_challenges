@@ -7,6 +7,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
+app.get('/', function(req, res) {
+    return res.json({msg: "Hola dese node"})
+})
+
 app.get('/issue/:issue', function(req, res) {
     return res.json({issue: parseInt(req.params.issue,10)})
 })

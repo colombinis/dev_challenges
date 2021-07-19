@@ -6,6 +6,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Routing\RouteContext;
 
 return function (App $app) {
+    
     $app->add(function (Request $request, RequestHandlerInterface $handler): Response {
         $routeContext = RouteContext::fromRequest($request);
         $routingResults = $routeContext->getRoutingResults();
